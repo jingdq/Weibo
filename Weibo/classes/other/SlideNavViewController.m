@@ -102,22 +102,75 @@
 -(void)beganDrag
 {
     [self.view.window insertSubview:_imageView atIndex:0];
-//    [self.view.window insertSubview:_cover aboveSubview:_imageView];
+    [self.view.window insertSubview:_cover aboveSubview:_imageView];
 }
 -(void)endedDrag
 {
+    // 取出挪动的距离
+    CGFloat tx = self.view.transform.tx;
+    // 取出宽度
+    CGFloat width = self.view.frame.size.width;
     
+    if (tx <= width * 0.5) { // 往左边挪
+        [UIView animateWithDuration:0.3 animations:^{
+            // 清空transform
+            self.view.transform = CGAffineTransformIdentity;
+            
+            // 让imageView恢复默认的scale
+            _imageView.transform = CGAffineTransformMakeScale(kDefaultScale, kDefaultScale);
+            
+            // 让遮盖恢复默认的alpha
+            _cover.alpha = kDefaultAlpha;
+        } completion:^(BOOL finished) {
+            // 移除两个view
+            [_imageView removeFromSuperview];
+            [_cover removeFromSuperview];
+        }];
+    } else { // 往右边挪
+        [UIView animateWithDuration:0.3 animations:^{
+            // 挪到最右边
+            self.view.transform = CGAffineTransformMakeTranslation(width, 0);
+            
+            // 让imageView缩放为1
+            _imageView.transform = CGAffineTransformMakeScale(1, 1);
+            
+            // 让遮盖alpha变为0
+            _cover.alpha = 0;
+        } completion:^(BOOL finished) {
+            // 清空transform
+            self.view.transform = CGAffineTransformIdentity;
+            
+            // 移除两个view
+            [_imageView removeFromSuperview];
+            [_cover removeFromSuperview];
+            
+            // 移除栈顶控制器
+            [self popViewControllerAnimated:NO];
+        }];
+    }
+
 }
 -(void)dragging:(UIPanGestureRecognizer*)pan
 {
     // 挪动整个导航view
     
     
+    // 挪动整个导航view  判断挪动的方向 如果起初往左挪动 则重置 == 不能向左挪动
     CGFloat tx = [pan translationInView:self.view].x;
-    if (tx < 0) {
-        tx = 0;
-    }
-    self.view.transform=CGAffineTransformMakeTranslation(tx, 0);
+    if (tx < 0) tx = 0;
+    self.view.transform = CGAffineTransformMakeTranslation(tx, 0);
+    
+    // 计算拖动距离的比例
+    double txScale = tx/self.view.frame.size.width;
+    
+    // 让imageview缩放
+    double scale = kDefaultScale + (txScale/0.5) * (1 - kDefaultScale);
+    if (scale > 1) scale = 1;
+    _imageView.transform = CGAffineTransformMakeScale(scale, scale);
+    
+    // 让遮盖透明度改变
+    double alpha = kDefaultAlpha - (txScale/0.5) * kDefaultAlpha;
+    _cover.alpha = alpha;
     
     
     

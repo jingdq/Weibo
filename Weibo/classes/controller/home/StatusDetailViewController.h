@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatusDetailViewController : UIViewController
+@interface StatusDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

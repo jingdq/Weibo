@@ -67,6 +67,11 @@
 // cell边框的宽度
 #define kCellBorderWidth 10
 
+// tableView每个cell的间距
+#define kTableViewCellMargin 5
+// tableView第一个cell的间距
+#define kTableTopBorderWidth 5
+
 // 配图的尺寸
 #define kImageWidth 120
 #define kImageHeight 120

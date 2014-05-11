@@ -132,7 +132,7 @@
     }
 
 
-    cell.statusCellFrame = _statusCellFrames[indexPath.row];
+    cell.baseFrame = _statusCellFrames[indexPath.row];
     
     return cell;
     

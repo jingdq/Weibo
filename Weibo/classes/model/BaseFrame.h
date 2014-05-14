@@ -11,7 +11,7 @@
 @interface BaseFrame : NSObject
 {
     CGFloat _cellHeight;
-    CGFloat _retweetHeight;
+     CGRect _retweet;
     
 }
 @property (nonatomic, strong) Status *status;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Status;
 @interface StatusDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-
+@property (nonatomic, strong) Status *status;
 @end

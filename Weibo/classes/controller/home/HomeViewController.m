@@ -145,6 +145,9 @@
 {
  
     StatusDetailViewController *detailCtrl = [[StatusDetailViewController alloc]init];
+    StatusCellFrame *cellFrame = [_statusCellFrames objectAtIndex:indexPath.row];
+    Status *status = cellFrame.status;
+    [detailCtrl setStatus:status];
     [self.navigationController pushViewController:detailCtrl animated:YES];
 }
 

@@ -61,13 +61,16 @@
 {
     // 1.转发
     _repost = [self addBtnWithTitle:@"转发" x:0];
-    
+    _repost.tag = TitleViewBtnTypeRepost;
     // 2.评论
     _comment = [self addBtnWithTitle:@"评论" x:kBtnWidth];
+    _repost.tag = TitleViewBtnTypeComment;
     [self btnClick:_comment];
     
     // 3.赞
     _attitude = [self addBtnWithTitle:@"赞" x:_bg.frame.size.width - kBtnWidth];
+    _attitude.tag = TitleViewBtnTypeAttitude;
+
     _attitude.enabled = NO;
 }
 
@@ -137,7 +140,11 @@
         _indicator.center = center;
     }];
     
+    _type = btn.tag;
     
+    if (_btnClickBlock) {
+        _btnClickBlock();
+    }
 
 }
 

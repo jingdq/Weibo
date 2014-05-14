@@ -11,6 +11,7 @@
 #import "StatusDetailCell.h"
 #import "StatusDetailCellFrame.h"
 #import "StatusDetailViewController.h"
+#import "StatusTool.h"
 #define kOptionHeight 44
 #define kTitleViewHeiht 50
 @interface StatusDetailViewController ()<MJRefreshBaseViewDelegate>
@@ -21,6 +22,8 @@
     StatusDetailTitleView *_titleView;
     StatusDetailCellFrame *_statusFrame;
 }
+
+
 @end
 
 @implementation StatusDetailViewController
@@ -134,10 +137,6 @@
     
 }
 
-
-
-
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
  
@@ -158,6 +157,11 @@
             _titleView.status = _status;
         }
     }
+    __unsafe_unretained StatusDetailViewController *detail = self;
+    _titleView.btnClickBlock = ^{
+       [detail loadAllNewData];
+       [detail->_tableView reloadData];
+    };
  
     return _titleView;
 }
@@ -175,6 +179,38 @@
 {
  
 
+}
+#pragma mark 刷新所有的数据
+- (void)loadAllNewData
+{
+    // 1.刷新微博数据
+    [self loadNewStatus];
+    
+    // 2.根据状态刷新对应的表格数据（评论、转发）
+    if (_titleView.type == TitleViewBtnTypeRepost) {
+        [self loadNewReposts];
+    } else if (_titleView.type == TitleViewBtnTypeComment) {
+        [self loadNewComments];
+    }
+}
+
+#pragma mark 加载最新的微博数据
+- (void)loadNewStatus{
+//   [StatusTool ]
+
+}
+
+
+#pragma mark 最新的加载转发列表
+- (void)loadNewReposts{
+
+
+}
+
+#pragma mark 最新的加载评论列表
+- (void)loadNewComments{
+    
+    
 }
 
 

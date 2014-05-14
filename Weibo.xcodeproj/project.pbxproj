@@ -315,6 +315,8 @@
 		71EBEA36192307C900E1CC47 /* statusdetail_tooltip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EBE9FA192307C900E1CC47 /* statusdetail_tooltip@2x.png */; };
 		71EBEA37192307C900E1CC47 /* statusdetail_tooltip_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EBE9FB192307C900E1CC47 /* statusdetail_tooltip_hand.png */; };
 		71EBEA38192307C900E1CC47 /* statusdetail_tooltip_hand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EBE9FC192307C900E1CC47 /* statusdetail_tooltip_hand@2x.png */; };
+		71EBEA3B192315F600E1CC47 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EBEA3A192315F600E1CC47 /* Comment.m */; };
+		71EBEA3E1923164C00E1CC47 /* BaseTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EBEA3D1923164B00E1CC47 /* BaseTextModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -708,6 +710,10 @@
 		71EBE9FA192307C900E1CC47 /* statusdetail_tooltip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusdetail_tooltip@2x.png"; sourceTree = "<group>"; };
 		71EBE9FB192307C900E1CC47 /* statusdetail_tooltip_hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusdetail_tooltip_hand.png; sourceTree = "<group>"; };
 		71EBE9FC192307C900E1CC47 /* statusdetail_tooltip_hand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusdetail_tooltip_hand@2x.png"; sourceTree = "<group>"; };
+		71EBEA39192315F600E1CC47 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		71EBEA3A192315F600E1CC47 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		71EBEA3C1923164B00E1CC47 /* BaseTextModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextModel.h; sourceTree = "<group>"; };
+		71EBEA3D1923164B00E1CC47 /* BaseTextModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -893,6 +899,10 @@
 				7170E61619177CD6009AC53F /* StatusCellFrame.m */,
 				71EB7626191F827A006ED98B /* StatusDetailCellFrame.h */,
 				71EB7627191F827A006ED98B /* StatusDetailCellFrame.m */,
+				71EBEA39192315F600E1CC47 /* Comment.h */,
+				71EBEA3A192315F600E1CC47 /* Comment.m */,
+				71EBEA3C1923164B00E1CC47 /* BaseTextModel.h */,
+				71EBEA3D1923164B00E1CC47 /* BaseTextModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1761,6 +1771,7 @@
 				710A2085191A382B00F13282 /* SlideNavViewController.m in Sources */,
 				7170E623191791B7009AC53F /* StatusImageListView.m in Sources */,
 				7170E5CB19173AFB009AC53F /* SDWebImageCompat.m in Sources */,
+				71EBEA3B192315F600E1CC47 /* Comment.m in Sources */,
 				71A2884419121C7600B120E5 /* MessageViewController.m in Sources */,
 				710A8D041913291100B179BC /* OauthViewController.m in Sources */,
 				7170E5D119173AFB009AC53F /* UIButton+WebCache.m in Sources */,
@@ -1771,6 +1782,7 @@
 				7170E5A819173AF5009AC53F /* MJRefreshFooterView.m in Sources */,
 				710A8CF9191325F500B179BC /* AFXMLRequestOperation.m in Sources */,
 				7170E5CC19173AFB009AC53F /* SDWebImageDecoder.m in Sources */,
+				71EBEA3E1923164C00E1CC47 /* BaseTextModel.m in Sources */,
 				710A8D14191350B700B179BC /* NSURLRequest+Url.m in Sources */,
 				71EB762E191F840D006ED98B /* StatusRetweetOptionBar.m in Sources */,
 				710A8CF6191325F500B179BC /* AFNetworkActivityIndicatorManager.m in Sources */,

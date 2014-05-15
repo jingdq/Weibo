@@ -15,6 +15,7 @@
 #import "Status.h"
 #import "BaseTextModel.h"
 #import "BaseTextCellFrame.h"
+#import "BaseTextCell.h"
 #define kOptionHeight 44
 #define kTitleViewHeiht 50
 @interface StatusDetailViewController ()<MJRefreshBaseViewDelegate>
@@ -107,7 +108,7 @@
     if (section == 0) {
         return 1;
     }
-    return 20;
+    return [self currentFrames].count;
 
 }
 
@@ -138,16 +139,21 @@
         
     }else {
      
-        static NSString *cellID = @"cellID";
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-        
+        static NSString *id2 = @"BaseTextCell";
+        BaseTextCell *cell = [tableView dequeueReusableCellWithIdentifier:id2];
         if (cell == nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+            cell = [[BaseTextCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:id2];
+//            cell.myTableView = tableView;
         }
-        cell.textLabel.text = @"4324234324";
-
-         return cell;
+        
+        BaseTextCellFrame *f = [self currentFrames][indexPath.row];
+        
+        cell.baseTextCellFrame = f;
+        
+        // 设置cell的行号
+        cell.indexPath = indexPath;
+        
+        return cell;
     
     }
     
@@ -160,7 +166,8 @@
     if (indexPath.section == 0) {
         return _statusFrame.cellHeight;
     }else{
-        return 44;
+        BaseTextCellFrame *f = [self currentFrames][indexPath.row];
+        return f.cellHeight;
     }
     
 }
@@ -176,6 +183,7 @@
     }
     __unsafe_unretained StatusDetailViewController *detail = self;
     _titleView.btnClickBlock = ^{
+        
        [detail loadAllNewData];
        [detail->_tableView reloadData];
     };
@@ -232,6 +240,10 @@
 #pragma mark 返回当前状态对应的frame数据
 - (NSMutableArray *)currentFrames
 {
+    
+   
+    NSLog(@"_titleView.type %d",_titleView.type);
+    
     if (_titleView.type == TitleViewBtnTypeComment) {
         return _commentFrames;
     } else if (_titleView.type == TitleViewBtnTypeRepost) {

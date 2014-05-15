@@ -211,6 +211,7 @@
 		7170E61719177CD6009AC53F /* StatusCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7170E61619177CD6009AC53F /* StatusCellFrame.m */; };
 		7170E62019179191009AC53F /* StatusImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7170E61F19179191009AC53F /* StatusImageView.m */; };
 		7170E623191791B7009AC53F /* StatusImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7170E622191791B7009AC53F /* StatusImageListView.m */; };
+		7190B0BC19244D5600E4D519 /* BaseTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7190B0BB19244D5600E4D519 /* BaseTextCell.m */; };
 		71A2883519120EEA00B120E5 /* Dock.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A2883419120EEA00B120E5 /* Dock.m */; };
 		71A2883819120FB600B120E5 /* DockItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A2883719120FB600B120E5 /* DockItem.m */; };
 		71A2884119121C6800B120E5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A2884019121C6800B120E5 /* HomeViewController.m */; };
@@ -593,6 +594,8 @@
 		7170E61F19179191009AC53F /* StatusImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusImageView.m; sourceTree = "<group>"; };
 		7170E621191791B7009AC53F /* StatusImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusImageListView.h; sourceTree = "<group>"; };
 		7170E622191791B7009AC53F /* StatusImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusImageListView.m; sourceTree = "<group>"; };
+		7190B0BA19244D5600E4D519 /* BaseTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextCell.h; sourceTree = "<group>"; };
+		7190B0BB19244D5600E4D519 /* BaseTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextCell.m; sourceTree = "<group>"; };
 		71A2883319120EEA00B120E5 /* Dock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dock.h; sourceTree = "<group>"; };
 		71A2883419120EEA00B120E5 /* Dock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dock.m; sourceTree = "<group>"; };
 		71A2883619120FB600B120E5 /* DockItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DockItem.h; sourceTree = "<group>"; };
@@ -1267,6 +1270,8 @@
 				7170E60A19177157009AC53F /* StatusCell.m */,
 				71EB7629191F83D4006ED98B /* StatusDetailCell.h */,
 				71EB762A191F83D4006ED98B /* StatusDetailCell.m */,
+				7190B0BA19244D5600E4D519 /* BaseTextCell.h */,
+				7190B0BB19244D5600E4D519 /* BaseTextCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1797,6 +1802,7 @@
 				7170E5CE19173AFB009AC53F /* SDWebImageDownloaderOperation.m in Sources */,
 				710A202D1919CCCE00F13282 /* StatusOptionBar.m in Sources */,
 				71A2883519120EEA00B120E5 /* Dock.m in Sources */,
+				7190B0BC19244D5600E4D519 /* BaseTextCell.m in Sources */,
 				7170E5A919173AF5009AC53F /* MJRefreshHeaderView.m in Sources */,
 				7170E5C819173AFB009AC53F /* MKAnnotationView+WebCache.m in Sources */,
 				71A2884119121C6800B120E5 /* HomeViewController.m in Sources */,

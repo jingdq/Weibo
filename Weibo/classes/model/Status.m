@@ -12,7 +12,7 @@
 @implementation Status
 - (id)initWithDict:(NSDictionary *)dict
 {
-    if (self = [super init]) {
+    if (self = [super initWithDict:dict]) {
         self.source = dict[@"source"];
         
         self.repostsCount = [dict[@"reposts_count"] intValue];
@@ -48,10 +48,15 @@
     
     
 }
-
-
-
-
-
+- (void)update:(Status *)other
+{
+    self.repostsCount = other.repostsCount;
+    self.commentsCount = other.commentsCount;
+    self.attitudesCount = other.attitudesCount;
+    
+    self.retweetedStatus.repostsCount = other.retweetedStatus.repostsCount;
+    self.retweetedStatus.commentsCount = other.retweetedStatus.commentsCount;
+    self.retweetedStatus.attitudesCount = other.retweetedStatus.attitudesCount;
+}
 
 @end

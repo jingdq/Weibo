@@ -144,11 +144,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
  
-    StatusDetailViewController *detailCtrl = [[StatusDetailViewController alloc]init];
-    StatusCellFrame *cellFrame = [_statusCellFrames objectAtIndex:indexPath.row];
-    Status *status = cellFrame.status;
-    [detailCtrl setStatus:status];
-    [self.navigationController pushViewController:detailCtrl animated:YES];
+
+    StatusDetailViewController *detail = [[StatusDetailViewController alloc] init];
+    
+    StatusCellFrame *frame = _statusCellFrames[indexPath.row];
+    detail.status = frame.status;
+    
+    [self.navigationController pushViewController:detail animated:YES];
+    
 }
 
 - (void)refreshViewBeginRefreshing:(MJRefreshBaseView *)refreshView

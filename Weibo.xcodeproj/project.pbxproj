@@ -317,6 +317,7 @@
 		71EBEA38192307C900E1CC47 /* statusdetail_tooltip_hand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71EBE9FC192307C900E1CC47 /* statusdetail_tooltip_hand@2x.png */; };
 		71EBEA3B192315F600E1CC47 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EBEA3A192315F600E1CC47 /* Comment.m */; };
 		71EBEA3E1923164C00E1CC47 /* BaseTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EBEA3D1923164B00E1CC47 /* BaseTextModel.m */; };
+		71EBEA4119233C9800E1CC47 /* BaseTextCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EBEA4019233C9800E1CC47 /* BaseTextCellFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -714,6 +715,8 @@
 		71EBEA3A192315F600E1CC47 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		71EBEA3C1923164B00E1CC47 /* BaseTextModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextModel.h; sourceTree = "<group>"; };
 		71EBEA3D1923164B00E1CC47 /* BaseTextModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextModel.m; sourceTree = "<group>"; };
+		71EBEA3F19233C9800E1CC47 /* BaseTextCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextCellFrame.h; sourceTree = "<group>"; };
+		71EBEA4019233C9800E1CC47 /* BaseTextCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextCellFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -903,6 +906,8 @@
 				71EBEA3A192315F600E1CC47 /* Comment.m */,
 				71EBEA3C1923164B00E1CC47 /* BaseTextModel.h */,
 				71EBEA3D1923164B00E1CC47 /* BaseTextModel.m */,
+				71EBEA3F19233C9800E1CC47 /* BaseTextCellFrame.h */,
+				71EBEA4019233C9800E1CC47 /* BaseTextCellFrame.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1825,6 +1830,7 @@
 				710A8CF3191325F500B179BC /* AFHTTPRequestOperation.m in Sources */,
 				7170E5D019173AFB009AC53F /* SDWebImagePrefetcher.m in Sources */,
 				7170E61719177CD6009AC53F /* StatusCellFrame.m in Sources */,
+				71EBEA4119233C9800E1CC47 /* BaseTextCellFrame.m in Sources */,
 				7170E5D319173AFB009AC53F /* UIImage+MultiFormat.m in Sources */,
 				7170E5D519173AFB009AC53F /* UIImageView+WebCache.m in Sources */,
 				710A8CF2191325F500B179BC /* AFHTTPClient.m in Sources */,

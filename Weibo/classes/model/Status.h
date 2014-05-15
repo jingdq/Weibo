@@ -26,8 +26,6 @@
 #import <Foundation/Foundation.h>
 #import "BaseTextModel.h"
 @interface Status : BaseTextModel
-//@property (nonatomic, copy) NSString *idstr; // ID
-//@property (nonatomic, copy) NSString *text; // 内容
 @property (nonatomic, copy) NSString *source; // 来源
 
 @property (nonatomic, assign) int repostsCount;  // 转发数
@@ -36,11 +34,10 @@
 
 @property (nonatomic, strong) NSArray *picUrls; // 所有的图片
 
-//@property (nonatomic, copy) NSString *createdAt; // 创建时间
-
 @property (nonatomic, strong) Status *retweetedStatus; // 被转发的微博
 
-//@property (nonatomic, strong) User *user; // 微博发送者
 
-- (id)initWithDict:(NSDictionary *)dict;
+
+// 更新当前微博模型的数据
+- (void)update:(Status *)other;
 @end
